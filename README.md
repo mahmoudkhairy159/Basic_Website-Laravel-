@@ -4,3 +4,4 @@
 (2)connect Bootstrap and font-awesome and use them in Laravel.
 (3) Controllers, model, and migration.
 (4) insert and get data from Database.
+
