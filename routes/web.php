@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/about', function () {
+    return view('about');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::resource('contract', 'MessagesController'); # In laravel 8 you have to define route like this
+Route::post('/contact','MessagesController@submit');
+Route::get('/','MessagesController@getMessages');
+
